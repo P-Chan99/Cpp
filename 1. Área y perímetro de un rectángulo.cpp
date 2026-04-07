@@ -1,0 +1,47 @@
+/*1.
+Construya una clase llamada Rectángulo que tenga los siguientes atributos:
+largo y ancho, y los siguientes métodos: perímetro() y área().
+*/
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+class Rectangulo{
+    private: //Atributos
+        float largo, ancho; 
+    public: //Métodos 
+        Rectangulo(float, float); //Constructor de la clase. Función inicializadora, que inicializa mis atributos 
+        void perimetro();
+        void area (); 
+};
+
+Rectangulo::Rectangulo(float _largo, float _ancho){
+    largo = _largo;
+    ancho = _ancho;
+}
+
+void Rectangulo::perimetro(){
+    float _perimetro;
+
+    _perimetro = (2*largo) +(2*ancho);
+
+    cout<<"El perimetro es: "<<_perimetro<<endl; 
+}
+
+void Rectangulo::area(){
+    float _area;
+
+    _area = largo * ancho;
+
+    cout<<"El área es: "<<_area<<endl; 
+}
+
+
+int main(){
+    Rectangulo r1(11, 7); 
+
+    r1.perimetro(); 
+    r1.area(); 
+
+    return 0; 
+}
